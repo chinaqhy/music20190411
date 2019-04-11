@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5audio插件</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="css/PsAudio.css">
+    <script type="text/javascript" src="JavaScript/PsAudio.js"></script>
+    <style>
+        #audio{
+             margin: auto;
+             top: 50px;
+         }
+    </style>
+</head>
+<body>
+    <div id="audio"></div>
+    <script>
+        // audioSrcFile,audioHttp,audioSrc,audioLic必须传,audioBg,audioListBg可不传该属性
+        // audioHttp为歌曲外链方式，如果是外链方式请传入对应歌曲的链接地址,如果是本地请不要传该属性
+        // audioSrcFile是本地歌曲和图片的文件夹名，请确保该文件夹与index.html文件为同级目录，如果不是
+        // 请传入相对与index.html的目录
+        // audioSrc是歌曲名字，请按歌手-歌曲名命名，本地也是一样，确保歌曲和图片能正确加载
+        // audioLic为歌词，请保持下列歌词相同格式,如果都没有歌词请传入空数组，如果单独某首歌没有歌
+        // 词，请在歌曲对应位置传入空字符串
+        // audioBg为播放器背景 audioListBg为播放列表颜色
+        // 其他的需要修改的颜色可以自行研究PsAudio.css文件进行修改
+
+        
+        //本地方式，不传外链属性,但是本地歌曲的命名需与audioSrc里的一致即歌手-歌名
+        psAudio({
+			audioSrcFile: 'soures',
+			audioSrc: ['南壽あさ子 - うろこ雲とソーダ水槽', '麻枝准 - 云流れて', 'Painted Water-What it is to love','吉森信 - ふるさとの匂い'],
+			audioLic: [
+			'[00:00.00] [00:03.73]','[00:00.00] [00:03.73]','[00:00.00] [00:03.73]','[00:00.00] [00:03.73]',
+			],
+			audioBg: '',
+			audioListBg: '',
+			})
+    </script>
+</body>
+</html>
